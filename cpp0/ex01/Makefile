@@ -6,12 +6,12 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:39:39 by smlamali          #+#    #+#              #
-#    Updated: 2023/12/26 15:10:02 by smlamali         ###   ########.fr        #
+#    Updated: 2023/12/27 19:04:38 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	Contact.cpp Main.cpp \
-		PhoneBookClass.cpp 
+		PhoneBookClass.cpp  utils.cpp
 
 CC = c++
 
@@ -20,6 +20,8 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 OBJS = $(SRCS:.cpp=.o)
 
 NAME = Phone
+
+all : $(NAME)
 
 .cpp.o:
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -32,3 +34,5 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+
+re: fclean all
