@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:27:18 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/27 19:04:37 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/12/28 16:46:02 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,22 @@
 
 # include <string>
 
-using namespace std;
+using namespace std; // TO DO : REMOVE ?
 
 class Contact
 {
 public:	
 
-	Contact(void);
-	~Contact(void);
-	
-	void	setContact(string fname, string lname, string secret, string surname, string number);
-	
-private:
 	string	f_name;
 	string	l_name;
 	string	secret;
 	string	surname;
 	string	number;
+
+	Contact(void);
+	~Contact(void);
+	
+	void	setContact(string fname, string lname, string secret, string surname, string number);
 };
 
 #endif

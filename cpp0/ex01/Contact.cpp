@@ -6,23 +6,24 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:26:45 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/27 19:04:36 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/12/28 17:07:42 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Contact.hpp"
+#include "PhoneBookClass.hpp"
 
 // --------- CONSTRUCTEUR ---------
 
 Contact::Contact(void)
 {
-	std::cout << "Constructor CONTACT called" << std::endl;
+	std::cout << CYN << "Constructor CONTACT called" << RST << std::endl;
 	return ;
 }
 
 // ---------SET CONTATCS ---------
-void	Contact::setContact(string fname, string lname, string secret, string surname, string number)
+void	Contact::setContact(string fname, string lname, string surname, string number, string secret)
 {
 	this->f_name = fname;
 	this->l_name = lname;
@@ -35,7 +36,7 @@ void	Contact::setContact(string fname, string lname, string secret, string surna
 // --------- DESTRUCTEUR ---------
 Contact::~Contact(void)
 {
-	std::cout << "Destructor CONTACT called" << std::endl;
+	std::cout << CYN << "Destructor CONTACT called" << RST << std::endl;
 	return ;
 }
 
