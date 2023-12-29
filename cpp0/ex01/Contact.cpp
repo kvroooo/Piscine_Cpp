@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:26:45 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/28 17:07:42 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/12/29 18:44:17 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "PhoneBookClass.hpp"
 
 // --------- CONSTRUCTEUR ---------
-
 Contact::Contact(void)
 {
 	std::cout << CYN << "Constructor CONTACT called" << RST << std::endl;
@@ -23,7 +22,7 @@ Contact::Contact(void)
 }
 
 // ---------SET CONTATCS ---------
-void	Contact::setContact(string fname, string lname, string surname, string number, string secret)
+void	Contact::setContact(std::string fname, std::string lname, std::string surname, std::string number, std::string secret)
 {
 	this->f_name = fname;
 	this->l_name = lname;

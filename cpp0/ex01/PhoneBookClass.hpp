@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:31:21 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/28 17:45:01 by smlamali         ###   ########.fr       */
+/*   Updated: 2023/12/29 15:59:04 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,17 +36,17 @@ class	PhoneBook
 public:
 	Contact	contacts[8]; //attribut membre
 	int	n_contact;		//nb contacts in contacts[]
-
+	int	oldest_c;
 	PhoneBook(void); //constructeur
 	~PhoneBook(void); //desctructeur (~)
 
 	void	addContact(Contact new_contact, int i); //fonction membre
+	void	searchContact( void );
+	void	createContact(int i);
+	std::string	truncks(std::string str);
+	std::string	get_line(std::string object);
+	std::string	itostr(int nbr);
+	int		strtoi(std::string str);
 };
-
-string	truncks(string str);
-string	get_line(string object);
-void	searchContact(PhoneBook *phone);
-void	createContact(PhoneBook *phone, int i);
-
 
 # endif

@@ -6,13 +6,12 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:39:39 by smlamali          #+#    #+#              #
-#    Updated: 2023/12/28 16:26:44 by smlamali         ###   ########.fr        #
+#    Updated: 2023/12/29 14:55:22 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	Contact.cpp Main.cpp 	\
-		PhoneBookClass.cpp 		\
-		add.cpp search.cpp
+		PhoneBookClass.cpp 		
 
 CC = c++
 
