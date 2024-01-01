@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:26:45 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/29 18:44:17 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/01 21:58:22 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	Contact::setContact(std::string fname, std::string lname, std::string surna
 {
 	this->f_name = fname;
 	this->l_name = lname;
-	this->secret = secret;
 	this->surname = surname;
 	this->number = number;
+	this->secret = secret;
 	return ;
 }
 

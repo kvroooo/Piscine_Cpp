@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBookClass.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:35:07 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/29 18:47:34 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/01 22:06:55 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ PhoneBook::PhoneBook(void) //fct construction
 	return ;
 }
 
+// ----------     ADD_CONTACT   ---------------
 void PhoneBook::addContact(Contact new_contact, int i)
 {
 	if (i < 8)
@@ -42,13 +43,14 @@ void PhoneBook::addContact(Contact new_contact, int i)
 	return ;
 }
 
+// ----------     TRUNCK_STR   ---------------
 std::string	PhoneBook::truncks(std::string str)
 {
 	unsigned sz = str.size() + (10 - str.size());
 
 	if (str.length() > 10)
 	{
-		str.resize(9);
+		str.resize(9);	
 		str.push_back('.');
 		return str;
 	}
@@ -57,25 +59,73 @@ std::string	PhoneBook::truncks(std::string str)
 	return str;
 }
 
+// ----------     CHAR_IS_NUMBER   ---------------
+int	PhoneBook::charisnum(char c)
+{
+	int	i = 0;
+
+	const char str[10][2] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+	while (i < 10)
+	{
+		if (c == str[i][0])
+			return 1;
+		i++;
+	}
+	return 0;
+}
+
+// ----------     STR_IS_NUM   ---------------
+int	PhoneBook::strisnum(std::string str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (charisnum(str[i]) == 0)
+			return 0;
+		i++;
+	}
+	return 1;
+}
+
+// ----------     GET_LINE   ---------------
 std::string	PhoneBook::get_line(std::string object)
 {
 	std::string info;
-	while (info.length() == 0)
+	if (object.compare("phone number") == 0)
 	{
-		std::cout << BGRN << "> " << object << " : " << RST << std::endl;
-		std::getline(std::cin, info);
-		if (info.length() == 0)
-			std::cout << BGRN << "> please try again :C" << RST << std::endl;
+		std::cout << "PROUT" << std::endl;
+		while (info.length() == 0 || !strisnum(info))
+		{
+			std::cout << BGRN << "> " << object << " : " << RST << std::endl;
+			std::getline(std::cin, info);
+			if (info.length() == 0 || !strisnum(info))
+				std::cout << BGRN << "> please try again :C" << RST << std::endl;
+		}
+		return info;
+	}
+	else
+	{
+		while (info.length() == 0)
+		{
+			std::cout << BGRN << "> " << object << " : " << RST << std::endl;
+			std::getline(std::cin, info);
+			if (info.length() == 0)
+				std::cout << BGRN << "> please try again :C" << RST << std::endl;
+		}
 	}
 	return info;
 }
 
+// ----------     CREATE_CONTACTS   ---------------
 void	PhoneBook::createContact(int i)
 {
 	Contact		new_contact;
 
 	new_contact.setContact(get_line("first name"), get_line("last name"),
-	get_line("surname"), get_line("phone number"), get_line("darkest secrest"));
+	get_line("surname"), get_line("phone number"), get_line("darkest secret"));
 	this->addContact(new_contact, i);
 }
 
@@ -88,6 +138,7 @@ std::string	PhoneBook::itostr(int nbr)
 	return str;
 }
 
+// ----------     STR_TO_INT   ---------------
 int	PhoneBook::strtoi(std::string str)
 {
 	int					nbr;
@@ -95,10 +146,10 @@ int	PhoneBook::strtoi(std::string str)
 
 	strm << str;
 	strm >> nbr;
-	std::cout << "nbr=" << nbr << std::endl;
 	return nbr;
 }
 
+// ----------     SEARCH CONTACTS   ---------------
 void	PhoneBook::searchContact(void)
 {
 	int 	i = 0;
@@ -113,11 +164,11 @@ void	PhoneBook::searchContact(void)
 	}
 	std::cout << BGRN << " > select index of the contact you want to see : " << RST << std::endl;
 	std::getline(std::cin, str);
-	j = strtoi(str);
-	if (j > n_contact - 1)
+	if (!strisnum(str) || strtoi(str) > n_contact - 1)
 		std::cout << "> this index does not exist :c" << std::endl;
 	else
 	{
+		j = strtoi(str);
 		std::cout << GRN << "> first name : " << this->contacts[j].f_name << RST << std::endl;
 		std::cout << GRN << "> last name : " << this->contacts[j].l_name << RST<< std::endl;
 		std::cout << GRN << "> surname : " << this->contacts[j].surname << RST << std::endl;

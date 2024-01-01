@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PHONE_BOOK_CLASS_H
+#ifndef PHONE_BOOK_CLASS_H
 # define PHONE_BOOK_CLASS_H
 
 #include "Contact.hpp"
@@ -30,23 +30,24 @@
 //Reset
 #define RST "\e[0m"
 
-// declaration de classe PhoneBook
 class	PhoneBook
 {
 public:
-	Contact	contacts[8]; //attribut membre
-	int	n_contact;		//nb contacts in contacts[]
+	Contact	contacts[8]; 
+	int	n_contact;
 	int	oldest_c;
-	PhoneBook(void); //constructeur
-	~PhoneBook(void); //desctructeur (~)
-
-	void	addContact(Contact new_contact, int i); //fonction membre
+	PhoneBook(void);
+	~PhoneBook(void);
+	
+	int		charisnum(char c);
+	int		strisnum(std::string str);
+	int		strtoi(std::string str);
 	void	searchContact( void );
+	void	addContact(Contact new_contact, int i); 
 	void	createContact(int i);
 	std::string	truncks(std::string str);
 	std::string	get_line(std::string object);
 	std::string	itostr(int nbr);
-	int		strtoi(std::string str);
 };
 
 # endif
