@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:44:20 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/03 03:29:54 by kuro             ###   ########.fr       */
+/*   Updated: 2024/01/04 01:41:19 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void randomChump(std::string name)
 {
-	Zombie* newZ = new Zombie(name);
-	newZ->announce();
-	delete newZ;
+	Zombie Zombie(name);
+	
+	Zombie.announce();
 	return ;
 }

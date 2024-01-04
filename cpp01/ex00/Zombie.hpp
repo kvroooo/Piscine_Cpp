@@ -6,7 +6,7 @@
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:19:34 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/03 03:28:21 by kuro             ###   ########.fr       */
+/*   Updated: 2024/01/04 01:32:26 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,14 @@ class Zombie
 {
 private:
 	std::string name;
-	
+
 public:
 	
-	Zombie(std::string name);
+	Zombie(void);
 	~Zombie(void);
-	
-	void	announce( void );
+	Zombie(std::string name);
+
+	void	announce( void ) const;
 };
 
 Zombie*	newZombie(std::string name);
