@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 01:19:34 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/05 14:52:27 by kuro             ###   ########.fr       */
+/*   Created: 2024/01/05 15:23:30 by kuro              #+#    #+#             */
+/*   Updated: 2024/01/05 16:38:13 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#ifndef WEAPON_H
+# define WEAPON_H
 
-# include <string> 
-# include <iostream> 
+#include <iostream>
+#include <string>
 
 //Regular bold text
 #define BRED "\e[1;31m"
@@ -31,22 +31,17 @@
 //Reset
 #define RST "\e[0m"
 
-class Zombie
+class Weapon
 {
 private:
-	std::string name;
-
+	std::string type;
 public:
-	
-	Zombie(void);
-	~Zombie(void);
-	Zombie(std::string name);
+	Weapon(void);
+	Weapon(std::string weapon);
+	~Weapon( void );
 
-	void	announce( void ) const;
+	void 			setType(std::string nType);
+	std::string&	getType( void );
 };
-
-void	randomChump(std::string name);
-Zombie*	newZombie(std::string name);
-Zombie* zombieHorde(int N, std::string name);
 
 #endif

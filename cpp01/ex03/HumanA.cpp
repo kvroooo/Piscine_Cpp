@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 01:20:28 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/05 14:52:39 by kuro             ###   ########.fr       */
+/*   Created: 2024/01/05 15:50:27 by kuro              #+#    #+#             */
+/*   Updated: 2024/01/05 16:40:28 by kuro             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-Zombie::Zombie(void)
+HumanA::HumanA(std::string name, Weapon weapon)
 {
-	std::cout << "Constructor called" <<std::endl;
-}
-
-Zombie::Zombie(std::string name)
-{
-	std::cout << CYN << "CONSTRUCTOR ZOMBIE CALLED" << RST << std::endl;
+	std::cout << CYN << "CONSTRUCTOR " << name << " CALLED" << RST << std::endl;
 	this->name = name;
+	this->weapon = weapon;
 }
 
-void Zombie::announce( void ) const
+void HumanA::attack(void)
 {
-	std::cout << BGRN << this->name << " : BraiiiiiiinnnzzzZ..." << RST << std::endl;
+	std::cout << BGRN << this->name << " attacks with their " << this->weapon.getType() << RST << std::endl;
 }
 
-Zombie::~Zombie( void )
+HumanA::~HumanA(void)
 {
-	std::cout << CYN << "DESTRUCTOR "<< this->name << " CALLED" << RST << std::endl;
+	std::cout << CYN << "DESTRUCTOR " << this->name << " CALLED" << RST << std::endl;
 }
