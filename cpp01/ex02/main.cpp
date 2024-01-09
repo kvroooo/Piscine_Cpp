@@ -5,26 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/03 01:19:16 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/09 16:54:13 by smlamali         ###   ########.fr       */
+/*   Created: 2024/01/09 18:19:25 by smlamali          #+#    #+#             */
+/*   Updated: 2024/01/09 18:30:14 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
 
 int	main(void)
 {
-	Zombie *kumacy;
+	std::string str = "HI THIS IS BRAIN";
 
-	std::cout << BRED << "*** NEW ZOMBIE ***" << RST <<std::endl;
-	kumacy = newZombie("Kumacyyy !");
-	kumacy->announce();
+	std::string*	stringPTR = &str;
+	std::string&	stringREF = str;
 
-	std::cout << std::endl << BRED << "*** RANDOMCHUMP ***" << RST << std::endl;
-	randomChump("Ryuma");
-	//Destructor Ryuma called at end of randomChump()
-	std::cout << std::endl;
-	kumacy->announce();
-	delete kumacy;
+	std::cout << &str << "\t" << str << std::endl;
+	std::cout << stringPTR << "\t" << *stringPTR << std::endl;
+	std::cout << &stringREF << "\t" << str << std::endl;
 	return 0;
 }

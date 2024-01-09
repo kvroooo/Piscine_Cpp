@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+         #
+#    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/03 02:03:18 by kuro              #+#    #+#              #
-#    Updated: 2024/01/04 01:49:34 by kuro             ###   ########.fr        #
+#    Updated: 2024/01/09 16:56:04 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp Zombie.cpp newZombie.cpp randomChump.cpp zombieHorde.cpp
+SRCS =	main.cpp Zombie.cpp NewZombie.cpp ZombieHorde.cpp
 
 CC = c++
 

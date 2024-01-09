@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:20:28 by kuro              #+#    #+#             */
-/*   Updated: 2024/01/04 01:33:34 by kuro             ###   ########.fr       */
+/*   Updated: 2024/01/09 16:52:56 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(void)
+Zombie::Zombie( void )
 {
 	std::cout << "Constructor called" <<std::endl;
 }
 
-Zombie::Zombie(std::string name)
+Zombie::Zombie( std::string name )
 {
 	std::cout << CYN << "CONSTRUCTOR ZOMBIE CALLED" << RST << std::endl;
 	this->name = name;

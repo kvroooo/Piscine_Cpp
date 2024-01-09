@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/01/03 02:03:18 by kuro              #+#    #+#              #
-#    Updated: 2024/01/09 16:52:55 by smlamali         ###   ########.fr        #
+#    Created: 2024/01/09 18:28:34 by smlamali          #+#    #+#              #
+#    Updated: 2024/01/09 18:29:33 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp Zombie.cpp NewZombie.cpp RandomChump.cpp
+SRCS =	main.cpp
 
 CC = c++
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = Zombies
+NAME = bonjour
 
 all : $(NAME)
 
