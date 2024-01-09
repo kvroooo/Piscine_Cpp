@@ -6,15 +6,15 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:35:07 by smlamali          #+#    #+#             */
-/*   Updated: 2024/01/09 15:01:57 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:07:26 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <sstream>
 #include <string>
-#include "phoneBookClass.hpp"
-#include "contact.hpp"
+#include "PhoneBookClass.hpp"
+#include "Contact.hpp"
 
 //definition des classes
 

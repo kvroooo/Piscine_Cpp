@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.cpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:33:29 by smlamali          #+#    #+#             */
-/*   Updated: 2024/01/09 13:57:07 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:06:15 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "phoneBookClass.hpp"
+#include "PhoneBookClass.hpp"
 
 int	main(void)
 {

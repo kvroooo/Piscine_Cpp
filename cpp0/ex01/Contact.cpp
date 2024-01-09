@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:26:45 by smlamali          #+#    #+#             */
-/*   Updated: 2024/01/09 15:01:50 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:07:44 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "contact.hpp"
-#include "phoneBookClass.hpp"
+#include "Contact.hpp"
+#include "PhoneBookClass.hpp"
 
 // --------- CONSTRUCTEUR ---------
 Contact::Contact(void)

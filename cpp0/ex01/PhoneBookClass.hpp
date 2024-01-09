@@ -13,7 +13,7 @@
 #ifndef PHONE_BOOK_CLASS_H
 # define PHONE_BOOK_CLASS_H
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 //Regular bold text
 #define BRED "\e[1;31m"
