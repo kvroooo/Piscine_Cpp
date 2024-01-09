@@ -6,7 +6,7 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:39:39 by smlamali          #+#    #+#              #
-#    Updated: 2023/12/29 14:55:22 by smlamali         ###   ########.fr        #
+#    Updated: 2024/01/09 14:09:39 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS =	Contact.cpp Main.cpp 	\
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 OBJS = $(SRCS:.cpp=.o)
 

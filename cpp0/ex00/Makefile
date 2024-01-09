@@ -6,11 +6,11 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:39:39 by smlamali          #+#    #+#              #
-#    Updated: 2023/12/27 19:08:33 by smlamali         ###   ########.fr        #
+#    Updated: 2024/01/09 13:54:47 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	Megaphone.cpp 
+SRCS =	megaphone.cpp 
 
 CC = c++
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJS = $(SRCS:.cpp=.o)
 
-NAME = Megaphone
+NAME = megaphone
 
 all: $(NAME)
 

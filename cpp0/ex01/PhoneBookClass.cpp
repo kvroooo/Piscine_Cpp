@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBookClass.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kuro <kuro@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:35:07 by smlamali          #+#    #+#             */
-/*   Updated: 2024/01/01 22:06:55 by kuro             ###   ########.fr       */
+/*   Updated: 2024/01/09 14:35:36 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 //definition des classes
 
-PhoneBook::PhoneBook(void) //fct construction
+PhoneBook::PhoneBook(void) : n_contact(0), oldest_c(0) //fct construction
 {
 	std::cout << CYN << "Constructor PHONEBOOK called" << RST << std::endl;
 	return ;
@@ -30,14 +30,14 @@ void PhoneBook::addContact(Contact new_contact, int i)
 	if (i < 8)
 	{
 		this->contacts[i] = new_contact;
-		if (n_contact < 8)
+		if (this->n_contact < 8)
 			this->n_contact += 1;
 	}
 	else
 	{
 		this->contacts[this->oldest_c] = new_contact;
 		this->oldest_c += 1;
-		if (this->oldest_c >= 2)
+		if (this->oldest_c >= 8)
 			this->oldest_c = 0;
 	}
 	return ;
@@ -50,7 +50,7 @@ std::string	PhoneBook::truncks(std::string str)
 
 	if (str.length() > 10)
 	{
-		str.resize(9);	
+		str.resize(9);
 		str.push_back('.');
 		return str;
 	}
@@ -96,12 +96,11 @@ std::string	PhoneBook::get_line(std::string object)
 	std::string info;
 	if (object.compare("phone number") == 0)
 	{
-		std::cout << "PROUT" << std::endl;
-		while (info.length() == 0 || !strisnum(info))
+		while (!strisnum(info) || info.length() != 10)
 		{
 			std::cout << BGRN << "> " << object << " : " << RST << std::endl;
 			std::getline(std::cin, info);
-			if (info.length() == 0 || !strisnum(info))
+			if (!strisnum(info) || info.length() != 10)
 				std::cout << BGRN << "> please try again :C" << RST << std::endl;
 		}
 		return info;
@@ -178,7 +177,7 @@ void	PhoneBook::searchContact(void)
 	return ;
 }
 
-PhoneBook::~PhoneBook(void) //fct destruction
+PhoneBook::~PhoneBook(void)
 {
 	std::cout << CYN << "Destructor PHONEBOOK called" << RST << std::endl;
 	return ;

@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:31:21 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/29 15:59:04 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 14:15:34 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ public:
 	Contact	contacts[8]; 
 	int	n_contact;
 	int	oldest_c;
+
 	PhoneBook(void);
 	~PhoneBook(void);
 	

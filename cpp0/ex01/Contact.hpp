@@ -6,7 +6,7 @@
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/26 14:27:18 by smlamali          #+#    #+#             */
-/*   Updated: 2023/12/29 18:44:35 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 13:57:09 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ public:
 };
 
 #endif
-
-	// string	getFirstName( void ) const;
-	// string	getLastName( void ) const;
-	// string	getSurname( void ) const;
-	// string	getNumber( void) const;
-	// string	getSecret( void ) const;
-	// void	getContact( void) const;
-
-	// void	setFirstName(string str); 
-	// void	setLastName(string str); 
-	// void	setSurname(string str); 
-	// void	setNumber(string str); 
-	// void	setSecret(string str); 
