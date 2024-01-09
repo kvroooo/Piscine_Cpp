@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBookClass.hpp                                 :+:      :+:    :+:   */
+/*   phoneBookClass.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 13:31:21 by smlamali          #+#    #+#             */
-/*   Updated: 2024/01/09 14:15:34 by smlamali         ###   ########.fr       */
+/*   Updated: 2024/01/09 15:01:17 by smlamali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONE_BOOK_CLASS_H
 # define PHONE_BOOK_CLASS_H
 
-#include "Contact.hpp"
+#include "contact.hpp"
 
 //Regular bold text
 #define BRED "\e[1;31m"

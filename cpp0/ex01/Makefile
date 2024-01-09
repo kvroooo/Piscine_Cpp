@@ -6,12 +6,12 @@
 #    By: smlamali <smlamali@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/14 16:39:39 by smlamali          #+#    #+#              #
-#    Updated: 2024/01/09 14:09:39 by smlamali         ###   ########.fr        #
+#    Updated: 2024/01/09 15:00:47 by smlamali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	Contact.cpp Main.cpp 	\
-		PhoneBookClass.cpp 		
+SRCS =	contact.cpp main.cpp 	\
+		phoneBookClass.cpp 		
 
 CC = c++
 

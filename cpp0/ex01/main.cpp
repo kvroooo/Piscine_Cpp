@@ -12,7 +12,7 @@
 
 #include <iostream>
 #include <string>
-#include "PhoneBookClass.hpp"
+#include "phoneBookClass.hpp"
 
 int	main(void)
 {
